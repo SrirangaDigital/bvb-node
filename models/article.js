@@ -1,20 +1,5 @@
-let mongoose = require('mongoose');
+const Datastore = require('nedb');
 
-// Article schema
-let articleSchema = mongoose.Schema({
+db = new Datastore({ filename: './data/bvbMongoDB.json', autoload: true });
 
-	title: {
-		type: String,
-		required: true
-	},
-	author: {
-		type: String,
-		required: true
-	},
-	volume: {
-		type: String,
-		required: true
-	}
-});
-
-let Article = module.exports = mongoose.model('Article', articleSchema);
+module.exports = db;

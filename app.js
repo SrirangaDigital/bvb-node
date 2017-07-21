@@ -1,22 +1,6 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
-mongoose.connect('mongodb://bvbUSER:bvb123@127.0.0.1:27017/bvb');
-let db = mongoose.connection;
-
-// Check connection
-db.once('open', function(){
-
-	console.log('Connected to MongoDB');
-});
-
-
-// Check for db errors
-db.on('error', function(err){
-	console.log(err);
-});
 
 // Init app
 const app = express();
@@ -35,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// Setpublic folder
+// Set Public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 

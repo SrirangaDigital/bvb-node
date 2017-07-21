@@ -39,7 +39,9 @@ router.get('/search', function(req, res){
 router.post('/search', function(req, res){
 
 	let term = req.body.term;
-	Article.find({title: {'$regex': term}}, function(err, articles){
+	let regex = new RegExp(term, 'i');
+
+	Article.find({title: {'$regex': regex}}, function(err, articles){
 
 		if(err){
 			
