@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(method='POST', action='/articles/search')
+		#form-group
+			label Term: 
+			input.form-control(name='term', type='text')
+		input.btn.btn-primary(type='submit', value='Search')
