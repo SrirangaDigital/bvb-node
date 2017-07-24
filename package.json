@@ -2,14 +2,15 @@
   "name": "bvb-node",
   "version": "1.0.0",
   "description": "Archive of the Bhavan's Journal",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node app"
+    "start": "electron ."
   },
   "author": "Sriranga Digital",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "electron": "^1.6.11",
     "express": "^4.15.3",
     "mongoose": "^4.11.3",
     "nedb": "^1.8.0",
