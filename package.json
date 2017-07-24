@@ -15,5 +15,8 @@
     "mongoose": "^4.11.3",
     "nedb": "^1.8.0",
     "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.2"
   }
 }

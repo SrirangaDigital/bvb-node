@@ -10,8 +10,10 @@ function createWindow () {
 	app.server = require(__dirname + '/app')();
 
 	// Create the browser window.
-	win = new BrowserWindow();
-	// win.maximize();
+	win = new BrowserWindow({
+		icon: path.join(__dirname, 'public/img/logo.png')
+	});
+	win.maximize();
 
 	// and load the index.html of the app.
 	win.loadURL('http://localhost:3000');

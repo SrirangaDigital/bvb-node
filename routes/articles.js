@@ -41,7 +41,7 @@ router.post('/search', function(req, res){
 	let term = req.body.term;
 	let regex = new RegExp(term, 'i');
 
-	Article.find({title: {'$regex': regex}}, function(err, articles){
+	Article.find({Type: {'$regex': regex}}, function(err, articles){
 
 		if(err){
 			
