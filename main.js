@@ -7,11 +7,11 @@ let win;
 function createWindow () {
 
 	// Instantiate Express App
-	app.server = require(__dirname + '/app')();
+	app.server = require(__dirname + '/resources/app/app')();
 
 	// Create the browser window.
 	win = new BrowserWindow({
-		icon: path.join(__dirname, 'public/img/logo.png')
+		icon: path.join(__dirname, '/resources/app/public/img/logo.png')
 	});
 	win.maximize();
 
