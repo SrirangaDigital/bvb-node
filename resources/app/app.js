@@ -40,6 +40,12 @@ module.exports = () => {
 	let article = require('./routes/article');
 	app.use('/article', article);
 
+	let createIndex = require('./routes/createIndex');
+	app.use('/createIndex', createIndex);
+
+	let search = require('./routes/search');
+	app.use('/search', search);
+
 	// Start Server
 	app.listen(3000, function(){
 

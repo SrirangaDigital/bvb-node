@@ -1,4 +1,9 @@
 node_modules
 release-builds
+resources/app/index
+
+resources/app/public/data
+resources/app/source
+resources/app/public/index
 
 npm-debug.log
