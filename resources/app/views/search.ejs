@@ -1,0 +1,12 @@
+<% include header %>
+
+<h1><%= title %></h1>
+<form method="POST" action="/search">
+	<div id="form-group">
+		<label>Term:</label>
+		<input class="form-control" name="term" type="text">
+	</div><br />
+	<input class="btn btn-primary" type="submit" value="Search">
+</form>
+
+<% include footer %>

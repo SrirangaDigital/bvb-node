@@ -1,0 +1,10 @@
+<% include header %>
+
+<h1><%= title %></h1>
+<ul class="list-group">
+	<% results.forEach(function(result) { %>
+		<li class="list-group-item"><a href="/article/<%= result.ref %>"><%= result.ref + ' ' + result.score %></a></li>
+	<% }); %>
+</ul>
+
+<% include footer %>

@@ -1,4 +1,4 @@
-module.exports = () => {
+// module.exports = () => {
 	const express = require('express');
 	const path = require('path');
 	const bodyParser = require('body-parser');
@@ -11,7 +11,7 @@ module.exports = () => {
 
 	// Load View engine
 	app.set('views', path.join(__dirname, 'views'));
-	app.set('view engine', 'pug');
+	app.set('view engine', 'ejs');
 
 	// Body parser Middleware
 	// parse application/x-www-form-urlencoded
@@ -51,4 +51,4 @@ module.exports = () => {
 
 		console.log('Server started on port 3000');
 	});
-}
+// }

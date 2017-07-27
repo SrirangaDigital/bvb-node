@@ -1,9 +1,0 @@
-extends layout
-
-block content
-	div
-		h1 #{title}
-	ul.list-group
-		each result, i in results
-			li.list-group-item
-				a(href='/article/' + result.ref) #{result.ref} #{result.score}
