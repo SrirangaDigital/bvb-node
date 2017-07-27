@@ -5,6 +5,7 @@ resources/app/index
 resources/app/public/data
 resources/app/source
 resources/app/public/index
-resources/app/public/Volumes/
+resources/app/public/Volumes
+common
 
 npm-debug.log
