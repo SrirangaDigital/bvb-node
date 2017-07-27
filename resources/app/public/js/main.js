@@ -17,7 +17,7 @@ $(document).ready(function() {
 		})
 		PDFWindow.addSupport(win)
 
-		win.loadURL('http://localhost:3000/' + pdfURL);
+		win.loadURL('http://localhost:3000' + pdfURL);
 	});
 
 });
