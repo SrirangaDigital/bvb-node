@@ -2,6 +2,14 @@ const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
 
+require('electron-context-menu')({
+	prepend: (params, browserWindow) => [{
+		label: 'Rainbow',
+		// Only show it when right-clicking images
+		visible: params.mediaType === 'image'
+	}]
+});
+
 let win;
 
 function createWindow () {
