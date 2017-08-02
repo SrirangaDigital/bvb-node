@@ -60,6 +60,28 @@ router.get('/search', function(req, res){
 	});
 });
 
+router.get('/search/text/:term/:volume', function(req, res){
+
+	// Bring in SearchIndex Model
+	// Only one index is loaded at a time
+
+	var volIndex = ('000' + req.params.volume).substr(-3);
+	volIndex = ((parseInt(volIndex) > 0) && (parseInt(volIndex) <= 60)) ? volIndex : '001';
+
+	let SearchIndex = require('../models/searchIndex')(volIndex);
+	
+	let term = req.params.term;
+
+    var result = SearchIndex.search(term, {
+        fields: {
+            // title: {boost: 1, expand: true}
+            text: {boost: 1, expand: false}
+        }
+    });
+
+	res.json(result);
+});
+
 function getDistinctParams(res, query, param){
 
 	var projection = {}; projection[param] = 1; projection['_id'] = 0;
