@@ -1,0 +1,10 @@
+<% include header %>
+
+<h1><%= title %></h1>
+<ul class="list-group">
+	<% data.uniqueData.forEach(function(row) { %>
+		<li class="list-group-item"><%= row %></li>
+	<% }); %>
+</ul>
+
+<% include footer %>

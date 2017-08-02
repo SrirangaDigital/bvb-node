@@ -2,7 +2,7 @@
   "name": "bvb-node",
   "version": "1.0.0",
   "description": "Archive of the Bhavan's Journal",
-  "main": "app.js",
+  "main": "resources/app/app.js",
   "scripts": {
     "start": "node resources/app/app"
   },
@@ -17,7 +17,8 @@
     "electron-pdf-window": "^1.0.11",
     "express": "^4.15.3",
     "jquery": "^3.2.1",
-    "nedb": "^1.8.0"
+    "nedb": "^1.8.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "electron-packager": "^8.7.2"

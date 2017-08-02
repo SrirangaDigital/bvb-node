@@ -46,6 +46,9 @@
 	let search = require('./routes/search');
 	app.use('/search', search);
 
+	let api = require('./routes/api');
+	app.use('/api', api);
+
 	// Start Server
 	app.listen(3000, function(){
 
