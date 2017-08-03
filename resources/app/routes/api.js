@@ -66,7 +66,9 @@ router.get('/search/text/:term/:volume', function(req, res){
 	// Only one index is loaded at a time
 
 	var volIndex = ('000' + req.params.volume).substr(-3);
-	volIndex = ((parseInt(volIndex) > 0) && (parseInt(volIndex) <= 60)) ? volIndex : '001';
+
+	if ((parseInt(volIndex) < 0) || (parseInt(volIndex) > 60))
+		res.json();
 
 	let SearchIndex = require('../models/searchIndex')(volIndex);
 	

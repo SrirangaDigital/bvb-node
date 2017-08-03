@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<ul style="min-height: 500px" class="list-group" when-scrolled='more()'>
+	<li class="list-group-item" ng-repeat="result in results">
+		<a href="/article/">{{ result.ref }} {{ result.score }}</a>
+	</li>
+</ul>
+<div data-ng-show="loading">Loading</div>
